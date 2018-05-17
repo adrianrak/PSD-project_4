@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$bright-color: #ffffff;
+$dark-color: #3c3c3c;
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+@mixin flex-style($display, $align-items, $justify-content) {
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    height: 100vh;
+    background-image: url('../images/layer-8.png');
+    background-size: cover;
+    @include flex-style(flex, center, center);
+    .hero {
+        @include flex-style(flex, center, center);
+        flex-direction: column;
+        color: $bright-color;
+        h1 {
+            font-size: 54px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-align: center;
+            margin-top: 80px;
+        }
+        p {
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;       
+            max-width: 600px;  
+            line-height: 29px;
+        }
+    }
+    
+}
